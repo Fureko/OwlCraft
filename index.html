@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OwlCraft</title>
+    <link href="https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Police par défaut (Silkscreen) */
+        body {
+            font-family: 'Silkscreen', cursive;
+        }
+        /* Police alternative plus lisible */
+        body.alt-font {
+            font-family: 'Arial', sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Bienvenue sur OwlCraft</h1>
+        <!-- Bouton pour changer de police -->
+        <button id="fontSwitcher">Changer de police</button>
+    </header>
+    
+    <section class="server-info">
+        <h2>Informations du Serveur</h2>
+        <p>IP : <span>fureko2.aternos.me</span></p>
+        <p>Port : <span>40711</span></p>
+    </section>
+
+    <section class="tutorial">
+        <h2>Comment rejoindre le serveur</h2>
+        <ol>
+            <li>Télécharge et installe la dernière version de Minecraft (UNIQUEMENT SUR ANDROID).</li>
+            <li> <a href="https://drive.proton.me/urls/R6K4JZWSJR#ynnpxJd4lvtm" download>Télécharger Minecraft APK</a></li> 
+            <li>Installe le jeu (Il sera demandé d'activer les sources inconnues dans les paramètres).</li>
+            <li>Ouvre le jeu et une fois sur la page d'accueil, connectez-vous avec un compte Microsoft.</li>
+            <li>Ajoute un nouveau serveur en entrant l'IP <span>fureko2.aternos.me</span> et le port <span>40711</span>.</li>
+            <li>Enregistre et rejoins le serveur !</li>
+        </ol>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 OwlCraft - Tous droits réservés.</p>
+    </footer>
+
+    <script>
+        // JavaScript pour changer de police
+        const switcher = document.getElementById('fontSwitcher');
+        switcher.addEventListener('click', function() {
+            document.body.classList.toggle('alt-font');
+            switcher.textContent = document.body.classList.contains('alt-font') ? 'Revenir à Silkscreen' : 'Changer de police';
+        });
+    </script>
+</body>
+</html>
